@@ -10,13 +10,13 @@ body{
     margin:auto;
     margin-top: 200px;
     box-sizing: border-box;
-    background-color: #EDD500;
+    background-color: #beac06;
 }
 
 .main-title{
     border-radius: 8px;
     padding:20px;
-    background-color: #FFE924;
+    background-color: #f8e53c;
     box-sizing: border-box;
 }
 
@@ -49,6 +49,13 @@ body{
     background-color: #FFF06D;
     border-radius: 8px;
 }
+
+.mainOption:hover {
+    transform: scale(1.1);
+    background-color: #f8e133;
+    border: 5px solid #756a03;
+}
+
 
 
 .main-footer{
