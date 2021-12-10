@@ -346,9 +346,25 @@ function result(){
   resetButton.appendChild(textoButton) 
   document.querySelector("div.main-div").appendChild(resetButton)
 
+  
+
 }
 
 //reseta a tela, como se apertasse F5
 function restart(){
   window.location.reload()
 }
+
+/*
+
+tentar criar elemento escondido input, setar value 1 no primeiro onclick.
+
+
+depois no segundo setar o value como 2
+
+
+e no terceiro 3 e por ultimo coletar o value do elemento input
+
+
+*/
+

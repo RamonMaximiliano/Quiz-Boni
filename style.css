@@ -132,3 +132,8 @@ body{
 }
 
 /*Result page*/
+
+
+.hidden {
+    display: none;
+  }
