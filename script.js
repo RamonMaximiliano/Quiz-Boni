@@ -164,7 +164,7 @@ function nextQuestion2(){
 
     let nextQuestion = document.createElement("h1")
     nextQuestion.setAttribute("class", "main-title");
-    nextQuestion.setAttribute("id", "main-title2");
+    nextQuestion.setAttribute("id", "main-title5");
     let nextText = document.createTextNode("Qual melhor empresa?")
     nextQuestion.appendChild(nextText)
     document.querySelector("div.main-div").appendChild(nextQuestion)
@@ -176,7 +176,7 @@ function nextQuestion2(){
     //secondOption1.appendChild(textSecondOption1)
     thirdOption1.setAttribute("id", "thirdOption1");
     thirdOption1.setAttribute("class", "mainOption");
-    thirdOption1.setAttribute("onclick", "thirdQuestion2()");
+    thirdOption1.setAttribute("onclick", "result()");
     document.querySelector(".main-div").appendChild(thirdOption1);
 
     //Number third question 1
@@ -201,7 +201,7 @@ function nextQuestion2(){
   //secondOption1.appendChild(textSecondOption1)
   thirdOption2.setAttribute("id", "thirdOption2");
   thirdOption2.setAttribute("class", "mainOption");
-  thirdOption2.setAttribute("onclick", "thirdQuestion2()");
+  thirdOption2.setAttribute("onclick", "result()");
   document.querySelector(".main-div").appendChild(thirdOption2);
 
   //Number third question 2
@@ -225,7 +225,7 @@ function nextQuestion2(){
     //secondOption1.appendChild(textSecondOption1)
     thirdOption3.setAttribute("id", "thirdOption3");
     thirdOption3.setAttribute("class", "mainOption");
-    thirdOption3.setAttribute("onclick", "thirdQuestion3()");
+    thirdOption3.setAttribute("onclick", "result()");
     document.querySelector(".main-div").appendChild(thirdOption3);
 
     //Number third question 1
@@ -250,7 +250,7 @@ function nextQuestion2(){
       //secondOption1.appendChild(textSecondOption1)
       thirdOption4.setAttribute("id", "thirdOption4");
       thirdOption4.setAttribute("class", "mainOption");
-      thirdOption4.setAttribute("onclick", "thirdQuestion2()");
+      thirdOption4.setAttribute("onclick", "result()");
       document.querySelector(".main-div").appendChild(thirdOption4);
   
       //Number third question 4
@@ -275,7 +275,7 @@ function nextQuestion2(){
     //secondOption1.appendChild(textSecondOption1)
     thirdOption5.setAttribute("id", "thirdOption5");
     thirdOption5.setAttribute("class", "mainOption");
-    thirdOption5.setAttribute("onclick", "thirdQuestion2()");
+    thirdOption5.setAttribute("onclick", "result()");
     document.querySelector(".main-div").appendChild(thirdOption5);
 
     //Number third question 5
@@ -286,7 +286,7 @@ function nextQuestion2(){
     thirdNumber5.setAttribute("class", "questionNUmber");
     document.getElementById("thirdOption5").appendChild(thirdNumber5);
 
-    //Option third question 1
+    //Option third question 5
     let thirdPhrase5 = document.createElement("p")
     let thirdTextPhrase5 = document.createTextNode("Tesla")
     thirdPhrase5.appendChild(thirdTextPhrase5)
@@ -295,3 +295,60 @@ function nextQuestion2(){
 
 }    
 
+
+function result(){
+  var finalQuestion1 = document.getElementById("thirdOption1");
+  finalQuestion1.remove();
+  var finalQuestion2 = document.getElementById("thirdOption2");
+  finalQuestion2.remove();
+  var finalQuestion3 = document.getElementById("thirdOption3");
+  finalQuestion3.remove();
+  var finalQuestion4 = document.getElementById("thirdOption4");
+  finalQuestion4.remove();
+  var finalQuestion5 = document.getElementById("thirdOption5");
+  finalQuestion5.remove();
+
+  var finalBigQuestion = document.getElementById("main-title5");
+  finalBigQuestion.remove()
+
+  //resultado
+    let resultTittle = document.createElement("h1")
+    resultTittle.setAttribute("class", "resultTitleRed");
+    resultTittle.setAttribute("id", "result");
+    let resultText = document.createTextNode("Você foi mal!")
+    resultTittle.appendChild(resultText)
+    document.querySelector("div.main-div").appendChild(resultTittle)
+   //resultado
+
+
+
+    let resultTextScreen = document.createElement("div")
+    resultTextScreen.setAttribute("class", "paragraphResult");
+    resultTextScreen.setAttribute("id", "paragraphResult");
+    let resultTextScreenvision = document.createTextNode(`Sua nota foi:`)
+    resultTextScreen.appendChild(resultTextScreenvision)
+    document.querySelector("div.main-div").appendChild(resultTextScreen)
+
+
+
+    let nota = 10
+    let notaResult = document.createElement("div")
+    notaResult.setAttribute("class", "nota");
+    let notaText = document.createTextNode(nota)
+    notaResult.appendChild(notaText)
+    document.querySelector("div.main-div").appendChild(notaResult)
+
+
+  let resetButton = document.createElement("button")
+  let textoButton = document.createTextNode("Restart")
+  resetButton.setAttribute("class", "resetButton")
+  resetButton.setAttribute("onclick", "restart()");
+  resetButton.appendChild(textoButton) 
+  document.querySelector("div.main-div").appendChild(resetButton)
+
+}
+
+//reseta a tela, como se apertasse F5
+function restart(){
+  window.location.reload()
+}

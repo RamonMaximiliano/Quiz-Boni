@@ -64,3 +64,71 @@ body{
     margin-right:auto;
 }
 
+
+
+
+/*Result page*/
+
+.paragraphResult{
+    background-color: white;
+    padding:20px;
+    margin:10px;
+    height:80px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.nota{
+    background-color: rgb(10, 97, 228);
+    color:white;
+    padding:20px;
+    padding-bottom:40px;
+    margin:10px;
+    height:80px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.resetButton{
+    color:white;
+    font-size: 30px;;
+    margin:10px;
+    align-items: center;
+    border-radius: 8px;
+    width:760px;
+    height:50px;
+    background-color: #22d60b;
+}
+
+.resetButton:hover {
+    background-color: #38af29;
+}
+
+.resultTitleRed{
+    text-align: center;
+    border-radius: 8px;
+    color:white;
+    padding:20px;
+    background-color: #f13838;
+    box-sizing: border-box;
+}
+
+.resultTitleBlue{
+    text-align: center;
+    border-radius: 8px;
+    color:white;
+    padding:20px;
+    background-color: #f13838;
+    box-sizing: border-box;
+}
+
+.resultTitleYellow{
+    text-align: center;
+    border-radius: 8px;
+    color:white;
+    padding:20px;
+    background-color: #f13838;
+    box-sizing: border-box;
+}
+
+/*Result page*/
