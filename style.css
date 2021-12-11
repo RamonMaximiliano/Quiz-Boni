@@ -85,7 +85,7 @@ body{
     padding-bottom:40px;
     margin:10px;
     height:80px;
-    font-size: 80px;
+    font-size: 50px;
     text-align: center;
 }
 
@@ -97,11 +97,11 @@ body{
     border-radius: 8px;
     width:760px;
     height:50px;
-    background-color: #22d60b;
+    background-color: #218b10;
 }
 
 .resetButton:hover {
-    background-color: #38af29;
+    background-color: #41ca2f;
 }
 
 .resultTitleRed{
@@ -136,4 +136,19 @@ body{
 
 .hidden {
     display: none;
+  }
+
+
+.mainInput{
+      text-align: center;
+      margin-top:20px;
+      margin-left:auto;
+      margin-right:auto;
+      width:500px;
+  }
+
+#mainInput{
+      text-align: center;
+      width:500px;
+      font-size:50px;
   }

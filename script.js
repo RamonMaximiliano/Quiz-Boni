@@ -1,4 +1,5 @@
 
+
 function nextQuestion(){
     var option1 = document.getElementById("option1");
     option1.remove();
@@ -315,28 +316,17 @@ function result(){
     let resultTittle = document.createElement("h1")
     resultTittle.setAttribute("class", "resultTitleRed");
     resultTittle.setAttribute("id", "result");
-    let resultText = document.createTextNode("Você foi mal!")
+    let resultText = document.createTextNode("Parabéns!")
     resultTittle.appendChild(resultText)
     document.querySelector("div.main-div").appendChild(resultTittle)
    //resultado
 
-
-
-    let resultTextScreen = document.createElement("div")
-    resultTextScreen.setAttribute("class", "paragraphResult");
-    resultTextScreen.setAttribute("id", "paragraphResult");
-    let resultTextScreenvision = document.createTextNode(`Sua nota foi:`)
-    resultTextScreen.appendChild(resultTextScreenvision)
-    document.querySelector("div.main-div").appendChild(resultTextScreen)
-
-
-
-    let nota = 10
     let notaResult = document.createElement("div")
     notaResult.setAttribute("class", "nota");
-    let notaText = document.createTextNode(nota)
+    let notaText = document.createTextNode("Obrigado por fazer este teste")
     notaResult.appendChild(notaText)
     document.querySelector("div.main-div").appendChild(notaResult)
+
 
 
   let resetButton = document.createElement("button")
@@ -346,7 +336,12 @@ function result(){
   resetButton.appendChild(textoButton) 
   document.querySelector("div.main-div").appendChild(resetButton)
 
-  
+  let resultTextScreen = document.createElement("div")
+  resultTextScreen.setAttribute("class", "paragraphResult");
+  resultTextScreen.setAttribute("id", "paragraphResult");
+  let resultTextScreenvision = document.createTextNode(`Sua nota foi:`)
+  resultTextScreen.appendChild(resultTextScreenvision)
+  document.querySelector("div.main-div").appendChild(resultTextScreen)
 
 }
 
@@ -367,8 +362,6 @@ function callTwo(){
   calcGrade2();
 }
 
-
-
 function calcGrade2(){
   let addNota = Number(document.getElementById("mainInput").value)
   document.getElementById("mainInput").value = `${addNota + 4}`;
@@ -376,18 +369,35 @@ function calcGrade2(){
 
 function calcGrade3(){
   let addNota2 = Number(document.getElementById("mainInput").value)
-  if(addNota2 == 4)
-  {document.getElementById("mainInput").value = "8";}
-  else if (addNota2 == 8){
-    document.getElementById("mainInput").value = "10";
+ 
+  let nota = 0
+  if(addNota2 === 4)
+  { nota=8
+    document.getElementById("mainInput").value = `${nota}`;
+    
+}  else if (addNota2 == 8){
+  nota=10
+    document.getElementById("mainInput").value = nota;
+    
   } else {
-    document.getElementById("mainInput").value = "4";
+    nota=4
+    document.getElementById("mainInput").value = nota;
+    
   }
+  let addNota3 = Number(document.getElementById("mainInput").value)
+  console.log(addNota3)
+
 }
+
 
 function callNota3(){
   result();
   calcGrade3();
 }
 
+
+console.log("Olá")
+
+
 /*Calculo Nota*/
+
