@@ -30,7 +30,7 @@ function nextQuestion(){
     //secondOption1.appendChild(textSecondOption1)
     secondOption1.setAttribute("id", "secondOption1");
     secondOption1.setAttribute("class", "mainOption");
-    secondOption1.setAttribute("onclick", "nextQuestion2()");
+    secondOption1.setAttribute("onclick", "callTwo()");
     document.querySelector(".main-div").appendChild(secondOption1);
 
     //Number 1
@@ -225,7 +225,7 @@ function nextQuestion2(){
     //secondOption1.appendChild(textSecondOption1)
     thirdOption3.setAttribute("id", "thirdOption3");
     thirdOption3.setAttribute("class", "mainOption");
-    thirdOption3.setAttribute("onclick", "result()");
+    thirdOption3.setAttribute("onclick", "callNota3()");
     document.querySelector(".main-div").appendChild(thirdOption3);
 
     //Number third question 1
@@ -355,16 +355,39 @@ function restart(){
   window.location.reload()
 }
 
-/*
+/*Calculo Nota*/
+document.getElementById("option2").addEventListener("click", nota1)
+function nota1(){
+  document.getElementById("mainInput").value = "4";
+};
 
-tentar criar elemento escondido input, setar value 1 no primeiro onclick.
+/*Ótimo método para chamar duas funções ao mesmo tempo só com um evento click*/
+function callTwo(){
+  nextQuestion2(); 
+  calcGrade2();
+}
 
 
-depois no segundo setar o value como 2
 
+function calcGrade2(){
+  let addNota = Number(document.getElementById("mainInput").value)
+  document.getElementById("mainInput").value = `${addNota + 4}`;
+}
 
-e no terceiro 3 e por ultimo coletar o value do elemento input
+function calcGrade3(){
+  let addNota2 = Number(document.getElementById("mainInput").value)
+  if(addNota2 == 4)
+  {document.getElementById("mainInput").value = "8";}
+  else if (addNota2 == 8){
+    document.getElementById("mainInput").value = "10";
+  } else {
+    document.getElementById("mainInput").value = "4";
+  }
+}
 
+function callNota3(){
+  result();
+  calcGrade3();
+}
 
-*/
-
+/*Calculo Nota*/
